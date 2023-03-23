@@ -2,31 +2,35 @@ const account = {
   name: "Fizzah",
   expenses: [],
   income: [],
-  addExpenses: function () {
-    // const ammount=parseFloat(prompt("how much is your expense?"));
-    parseFloat(prompt("how much is your expense?"));
-    ////const addExpenses = expenses.push(ammount); 
-    return `${this.expenses}.push${this.addExpenses()}`;
-  },
   getName: function () {
     console.log(this);
     alert(`Account name: ${this.name}`);
   },
-  typExpense: function () {
-    console.log(this);
-    parseFloat(prompt("what was your expense?(food,gas/etc)"));
-  },
-  getList: function () {
-    alert(`Account name: ${this.expenses}`);
+  addExpenses: function () {
+    let type = prompt("what was your expense?(food,gas/etc)");
+    let ammount = parseFloat(prompt("how much is your expense?"));
+    this.expenses.push({ type, ammount });
   },
   getIncome: function () {
-    console.log(this);
-    parseFloat(prompt("how much your income?"));
+    let addedIncome = parseFloat(prompt("how much is your income?"));
+    this.income.push({ addedIncome });
   },
-  getSummary:function(){
+  getList: function () {
     console.log(this);
-    return`Fizzah ,your balances are:${this.addExpenses()+this.expenses}`;
-  }
+    alert(`Income: ${this.income},Expense:${this.expenses}`);
+  },
+  //getSummary: function () {
+    //console.log(this);
+    //let totalIncome = 0;
+    //let totalExpenses = 0;
+    //this.income.foreach(function (income) {
+      //totalIncome = totalIncome + income.addedIncome;
+    //});
+    //this.expenses.foreach(function (expense) {
+      //totalExpenses = totalExpenses + expense.ammount;
+    //});
+    //alert(`Fizzah ,your balances are: ${totalIncome - totalExpenses}`);
+  //},
 };
 
 function menu() {
@@ -42,7 +46,6 @@ function menu() {
     menu()
   }
   if (choice === 3) {
-    account.typExpense();
     account.addExpenses();
     menu()
   }
