@@ -1,49 +1,59 @@
 const account = {
   name: "Fizzah",
-  newIncome: "new Income",
-  newExpense: "new expense",
-  getExpense: function () {
-    console.log(this);
+  expenses: [],
+  income: [],
+  addExpenses: function () {
     parseFloat(prompt("how much is your expense?"));
-  },
-  getIncome: function () {
-    console.log(this);
-    parseFloat(prompt("how much your income?"));
+    return `${this.expenses}.push${this.addExpenses}`;
   },
   getName: function () {
     console.log(this);
     alert(`Account name: ${this.name}`);
   },
+  typExpense: function () {
+    console.log(this);
+    parseFloat(prompt("what was your expense?(food,gas/etc)"));
+  },
+  getList: function () {
+    alert(`Account name: ${this.expenses}`);
+  },
+  getIncome: function () {
+    console.log(this);
+    parseFloat(prompt("how much your income?"));
+  },
 };
-console.log(account.getName());
-console.log(account.getIncome());
-console.log(account.getExpense());
 
 function menu() {
   const choice = parseFloat(
-    prompt("Please choose between 1) Display account name 2) Add Income 3) Add Expenses 4) Get Summary")
+    prompt("Please choose between 1) Display account name 2) Add Income 3) Add Expenses 4) Get List 5) Get Summary")
   );
   if (choice === 1) {
     account.getName();
+    menu()
   }
   if (choice === 2) {
     account.getIncome();
+    menu()
   }
   if (choice === 3) {
-    account.getExpense();
+    account.typExpense();
+    account.addExpenses();
+    menu()
   }
-  if (choice === 3) {
-    account.GetSummary();
+  if (choice === 4) {
+    account.getList();
+    menu()
+  }
+  if (choice === 5) {
+    account.getSummary();
+    menu()
   }
 }
 menu();
 
 
 
-const expenses = [];
-const addExpenses = expenses.concat(newExpense);
-const income = [];
-const addIncome = income.concat(newIncome);
+
 // create an account object
 
 // the object should hold all of our logic
