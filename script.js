@@ -20,16 +20,16 @@ const account = {
     alert(`Income: ${this.income},Expense:${this.expenses}`);
   },
   //getSummary: function () {
-    //console.log(this);
-    //let totalIncome = 0;
-    //let totalExpenses = 0;
-    //this.income.foreach(function (income) {
-      //totalIncome = totalIncome + income.addedIncome;
-    //});
-    //this.expenses.foreach(function (expense) {
-      //totalExpenses = totalExpenses + expense.ammount;
-    //});
-    //alert(`Fizzah ,your balances are: ${totalIncome - totalExpenses}`);
+  //console.log(this);
+  //let totalIncome = 0;
+  //let totalExpenses = 0;
+  //this.income.foreach(function (income) {
+  //totalIncome = totalIncome + income.addedIncome;
+  //});
+  //this.expenses.foreach(function (expense) {
+  //totalExpenses = totalExpenses + expense.ammount;
+  //});
+  //alert(`Fizzah ,your total income is  ${totalIncome},total expense is  ${totalExpenses} ,balances are: ${totalIncome - totalExpenses}`);
   //},
 };
 
