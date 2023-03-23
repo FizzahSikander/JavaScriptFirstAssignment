@@ -37,13 +37,15 @@ const account = {
     this.expenses.forEach(function (expense) {
       totalExpenses = totalExpenses + expense.ammount;
     });
-    alert(`Fizzah ,your total income is  ${totalIncome},total expense is  ${totalExpenses} ,balances are: ${totalIncome - totalExpenses}`);
+    alert(`Fizzah ,your total income is  ${totalIncome},
+    total expense is  ${totalExpenses} ,
+    balances are: ${totalIncome - totalExpenses}`);
   },
 };
 
 function menu() {
   const choice = parseFloat(
-    prompt("Please choose between 1) Display account name 2) Add Income 3) Add Expenses 4) Get List 5) Get Summary")
+    prompt("EXPENSE TRACKER \n Please choose between 1) Display account name 2) Add Income 3) Add Expenses 4) Get List 5) Get Summary")
   );
   if (choice === 1) {
     account.getName();
