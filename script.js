@@ -3,8 +3,10 @@ const account = {
   expenses: [],
   income: [],
   addExpenses: function () {
+    // const ammount=parseFloat(prompt("how much is your expense?"));
     parseFloat(prompt("how much is your expense?"));
-    return `${this.expenses}.push${this.addExpenses}`;
+    ////const addExpenses = expenses.push(ammount); 
+    return `${this.expenses}.push${this.addExpenses()}`;
   },
   getName: function () {
     console.log(this);
@@ -21,6 +23,10 @@ const account = {
     console.log(this);
     parseFloat(prompt("how much your income?"));
   },
+  getSummary:function(){
+    console.log(this);
+    return`Fizzah ,your balances are:${this.addExpenses()+this.expenses}`;
+  }
 };
 
 function menu() {
