@@ -23,7 +23,7 @@ const account = {
     });
     let expense = "";
     this.expenses.forEach(function (Expenses, index) {
-      expense += "Expense nr " + (index + 1) + ": " + Expenses.ammount + "\n";
+      expense += "Expense nr " + (index + 1) + ": " + Expenses.ammount + " for " + Expenses.type + "\n";
     });
     alert(`Income:${incomes},Expense:${expense}`);
   },
